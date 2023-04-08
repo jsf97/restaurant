@@ -1,7 +1,7 @@
 const content = document.getElementById('content');
 import contentimg from './content.jpg';
 
-export default function component () {
+export default function component (div) {
   let image = document.createElement('img');
   image.src = contentimg;
 
@@ -11,7 +11,7 @@ export default function component () {
   let para = document.createElement('p');
   para.innerHTML = 'This is a lot of paragraph text';
 
-  content.appendChild(image);
-  content.appendChild(header);
-  content.appendChild(para);
+  div.appendChild(image);
+  div.appendChild(header);
+  div.appendChild(para);
 }
