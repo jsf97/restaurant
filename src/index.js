@@ -1,22 +1,21 @@
-import component from './content.js'
-import homecontent from './home.js';
 const content = document.getElementById('content');
-// Function to get Navbar elements
-  const nav = document.getElementById('navbar');
-  const home = document.createElement('div');
-  home.textContent = 'Home'
-  nav.appendChild(home)
-  const menu = document.createElement('div');
-  menu.textContent = 'Menu'
-  nav.appendChild(menu)
-  const contact = document.createElement('div');
-  contact.textContent = 'Contact'
-  nav.appendChild(contact)
-  nav.style = 'display: flex; justify-content: center; gap: 50px; font-size: 2em';
-//
+const navbar = document.createElement('nav')
 
-component(content)
-home.addEventListener('click', ()=> {
-  alert('a')
-  homecontent(content);
-})
+import './style.css'
+
+content.classList.add('abc')
+
+const home = document.createElement('div');
+home.textContent = 'Home'
+const menu = document.createElement('div');
+menu.textContent = 'Menu'
+const contact = document.createElement('div');
+contact.textContent = 'Contact'
+
+navbar.appendChild(home)
+navbar.appendChild(menu)
+navbar.appendChild(contact)
+
+navbar.classList.add('nav')
+
+content.appendChild(navbar)
