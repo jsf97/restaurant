@@ -2,6 +2,7 @@ const content = document.getElementById('content');
 const navbar = document.createElement('nav')
 
 import './style.css'
+import menuContent from './menu.js'
 
 content.classList.add('abc')
 
@@ -19,3 +20,5 @@ navbar.appendChild(contact)
 navbar.classList.add('nav')
 
 content.appendChild(navbar)
+
+menuContent(content)
