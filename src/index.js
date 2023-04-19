@@ -1,12 +1,17 @@
+// CONST GLOBALS
 const content = document.getElementById('content');
 const navbar = document.createElement('nav')
-let menuState = false;
+content.classList.add('abc')
+//
 
+// IMPORTS
 import './style.css'
 import menuContent from './menu.js'
+import contactContent from './content.js'
+//
 
-content.classList.add('abc')
 
+// CREATING NAVBAR AND APPENDING IT TO CONTENT
 const home = document.createElement('div');
 home.textContent = 'Home'
 const menu = document.createElement('div');
@@ -19,16 +24,22 @@ navbar.appendChild(menu)
 navbar.appendChild(contact)
 
 navbar.classList.add('nav')
-
 content.appendChild(navbar)
+//
 
-menuContent(content);
-// menu.addEventListener('click', ()=> {
-//   if (menuState == false) {
-//     menuContent(content);
-//     menuState = true;
-//   }
-//   else {
-//     alert(' ya estas en el menu papa')
-//   }
-// })
+
+
+//EVENT TO CHANGE CONTENT UI TO MENU
+let menuState = false;
+menu.addEventListener('click', ()=> {
+   if (menuState == false) {
+     menuContent(content);
+     menuState = true;
+   }
+   else {
+     alert(' ya estas en el menu papa')
+   }
+ })
+ //
+
+ contactContent(content);

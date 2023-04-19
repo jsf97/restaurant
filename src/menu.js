@@ -8,16 +8,24 @@ import fourthImg from './menu3.jpg'
 
 
 
-function addMenu(container, dish, price) {
+function addMenu(container, image, dish, platePrice) {
   const newMenu = document.createElement('div');
   newMenu.classList.add('menu');
 
   const img = document.createElement('div');
   img.classList.add('dishImg');
-  img.textContent = 'aca va la img'
+  img.style.backgroundImage = `url(${image})`
 
   const dishInfo = document.createElement('div');
   dishInfo.classList.add('dishInfo');
+
+  const plate = document.createElement('h2');
+  plate.textContent = dish;
+  dishInfo.appendChild(plate)
+
+  const price = document.createElement('p');
+  price.textContent = '$' + platePrice
+  dishInfo.appendChild(price)
 
   newMenu.appendChild(img)
   newMenu.appendChild(dishInfo)
@@ -44,10 +52,10 @@ export default function menuContent(append) {
   menuesContainer.classList.add('menuContainer');
   container.appendChild(menuesContainer);
 
-    addMenu(menuesContainer)
-    addMenu(menuesContainer)
-    addMenu(menuesContainer)
-    addMenu(menuesContainer)
+    addMenu(menuesContainer, firstImg, 'Pollo al horno con papas', '100')
+    addMenu(menuesContainer, secondImg, 'Asado', '100')
+    addMenu(menuesContainer, thirdImg, 'Entraña', '100')
+    addMenu(menuesContainer, fourthImg, 'Costillar', '100')
 
 
   append.appendChild(container);
