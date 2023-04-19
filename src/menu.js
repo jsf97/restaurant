@@ -10,7 +10,7 @@ function addMenu(container, img, dish, price) {
 
   const dishInfo = document.createElement('div');
   dishInfo.classList.add('dishInfo')
-  
+
   const dishPlate = document.createElement('p');
   dishPlate.textContent = dish;
 
@@ -47,7 +47,10 @@ export default function menuContent(append) {
   container.appendChild(menuesContainer);
 
   addMenu(menuesContainer, firstImg, 'pollo al horno con papas', '$100')
-  
+    addMenu(menuesContainer, firstImg, 'pollo al horno con papas', '$100')
+    addMenu(menuesContainer, firstImg, 'pollo al horno con papas', '$100')
+    addMenu(menuesContainer, firstImg, 'pollo al horno con papas', '$100')
+
 
   append.appendChild(container);
 }
