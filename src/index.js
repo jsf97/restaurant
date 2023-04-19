@@ -1,5 +1,6 @@
 const content = document.getElementById('content');
 const navbar = document.createElement('nav')
+let menuState = false;
 
 import './style.css'
 import menuContent from './menu.js'
@@ -21,4 +22,13 @@ navbar.classList.add('nav')
 
 content.appendChild(navbar)
 
-menuContent(content)
+menuContent(content);
+// menu.addEventListener('click', ()=> {
+//   if (menuState == false) {
+//     menuContent(content);
+//     menuState = true;
+//   }
+//   else {
+//     alert(' ya estas en el menu papa')
+//   }
+// })
