@@ -57,6 +57,11 @@ export default function contactContent(append) {
   //FIRST CONTANCT ELEMENT
   createContact(container, 'juan');
   createContact(container, 'juan');
+  createContact(container, 'juan');
+  createContact(container, 'juan');
+  createContact(container, 'juan');
+  createContact(container, 'juan');
+  createContact(container, 'juan');
 
   //
   

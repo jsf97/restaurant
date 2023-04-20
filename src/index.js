@@ -27,19 +27,35 @@ navbar.classList.add('nav')
 content.appendChild(navbar)
 //
 
+//SECTION TO APPEND CONTAINERS
+const section = document.createElement('div');
+section.classList.add('section');
+content.appendChild(section)
+//
+
+
+menu.addEventListener('click', ()=> {
+  section.textContent = ''
+  menuContent(section);
+})
+
+contact.addEventListener('click', ()=> {
+  section.textContent = ''
+  contactContent(section);
+})
+
 
 
 //EVENT TO CHANGE CONTENT UI TO MENU
-let menuState = false;
-menu.addEventListener('click', ()=> {
-   if (menuState == false) {
-     menuContent(content);
-     menuState = true;
-   }
-   else {
-     alert(' ya estas en el menu papa')
-   }
- })
+// let menuState = false;
+// menu.addEventListener('click', ()=> {
+//    if (menuState == false) {
+//     menuContent(content);
+//     menuState = true
+//    }
+//    else if (menuState == true) {
+//     alert('ya estas')
+//    }
+//  })
  //
 
- contactContent(content);

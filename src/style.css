@@ -126,3 +126,8 @@
   border-radius: 5px;
   border: 1px solid red;
 }
+
+.section {
+  width: 100%;
+  height: 100%;
+}
